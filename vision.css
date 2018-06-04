@@ -1,7 +1,8 @@
-
-<style>
-.vision {
-    background-color: green;
-    color: red;
+body {
+    background: rgb(39, 39, 39)
 }
-</style>
+
+.container {
+    background: rgb(175, 175, 175)  
+    
+}
