@@ -3,15 +3,26 @@ var totalclicks = 0;
 var totalclicksupgrade = 0;
 var automate1totalclick = 0;
 var costA1 = 10;
+var productionmultiplier =1;
+
 
 function dollarUpdate() {
     document.getElementById('dollars').innerHTML = dollar.toFixed(3);
+    if (productionmultiplier>1){
+        productionmultiplier=productionmultiplier-0.0005;
+        document.getElementById('productionmultipliers').innerHTML = productionmultiplier.toFixed(4);
+    }  
 }
 
 function clickMe() {
     dollar = dollar + 1;
     totalclicks = totalclicks + 1;
     document.getElementById('dollars').innerHTML = dollar.toFixed(3);
+}
+
+function hoverOverMe() {
+    productionmultiplier=productionmultiplier+0.001; 
+    document.getElementById('productionmultipliers').innerHTML = productionmultiplier.toFixed(4);
 }
 
 function automate1Totalclick() {
@@ -27,7 +38,7 @@ function automate1Totalclick() {
 
 function CpsGutschreiben() {
     if (automate1totalclick > 0) {
-        dollar = dollar + automate1totalclick * totalclicks / 1000;
+        dollar = dollar + automate1totalclick * totalclicks / 1000* productionmultiplier;
     }
 }
 
