@@ -18,7 +18,7 @@
 
       <div class="container">
           <br />
-          <br />
+       
           <div class="jumbotron">
               <h3>  Your Balances:  
 
@@ -42,18 +42,13 @@
 
   
           <div class="col-sm-4">
-            <h3>  Active Area
-              <br /></h3>
-            
-              <button onclick="clickMe()">Klick mich</button>
-              <br /></p>
+            <h3>  Active Area</h3>
+            <br />
 
-            
-                  
-                  
+              <button onclick="clickMe()" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="+1$"> 
+                <b>ClickMe</b>
+              </button>
 
-
-            
           </div>
 
 
@@ -63,14 +58,14 @@
 
           <div class="col-sm-4">
             <h3>Automate</h3>
+            <br/>
+
+              <img src="clickme.jpeg" alt="clickMe" onclick="upgrade1Unlock()" style="width:auto;height:auto;border:0;" data-toggle="tooltip" data-placement="right" 
+              title="you earn /1000 of your total clicks made to the ClickMe Button">
+            <br/>
+            Cursors: <span id="upgrade1unlocks">0</span>
             <br />
-           
-              <img src="clickme.jpeg" alt="clickme" onclick="upgrade1Unlock()" style="width:auto;height:auto;border:0;">
-         
-        
-            Cursors: <span id="cursors">0</span>
-            <br />
-            Cursor Cost: <span id="cursorCost">10</span>
+            Cursor Cost: <span id="costU1s">10</span>
           </div>
 
 
@@ -80,12 +75,15 @@
 
 
           <div class="col-sm-4">
-            <h3>Upgrades </h3>        
+            <h3>Upgrades</h3>        
             Test
           </div>
         </div>
       </div>
 
 
+
+	
+		<script type="text/javascript" src="mainloop.js"></script>
 	</body>
 </html>
